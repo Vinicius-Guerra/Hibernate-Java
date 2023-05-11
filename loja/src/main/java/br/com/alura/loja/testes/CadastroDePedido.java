@@ -15,7 +15,10 @@ public class CadastroDePedido {
         popularBancoDeDados();
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao produtoDao = new ProdutoDao(em);
+        ClienteDao clienteDao = new ClienteDao(em);
+
         Produto produto = produtoDao.buscarPorId(1l);
+        Cliente cliente =  clienteDao.buscarPorId(1l);
 
         em.getTransaction().begin();
 
