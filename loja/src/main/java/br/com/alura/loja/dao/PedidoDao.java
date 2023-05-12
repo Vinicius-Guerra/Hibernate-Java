@@ -23,7 +23,7 @@ public class PedidoDao {
                 .getSingleResult();
     }
 
-    public List<Object[]> relatorioDeVendas() {
+    public List<RelatorioDeVendasVo> relatorioDeVendas() {
         String jpql = "SELECT produto.nome, " +
                 "SUM(item.quantidade)," +
                 "MAX(pedido.data)" +
@@ -32,7 +32,7 @@ public class PedidoDao {
                 "JOIN item.produto produto" +
                 "GROUP BY  produto.nome " +
                 "ORDER BY item.quantidade DESC";
-        return em.createQuery(jpql, Object[].class)
+        return em.createQuery(jpql, RelatorioDeVendasVo)
                 .getResultList();
     }
 
