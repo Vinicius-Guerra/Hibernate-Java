@@ -3,6 +3,7 @@ package br.com.alura.loja.vo;
 import java.time.LocalDate;
 
 public class RelatorioDeVendasVo {
+
     private String nomeProduto;
     private Long quantidadeVendida;
     private LocalDate dataUltimaVenda;
@@ -15,11 +16,8 @@ public class RelatorioDeVendasVo {
 
     @Override
     public String toString() {
-        return "RelatorioDeVendasVo{" +
-                "nomeProduto='" + nomeProduto + '\'' +
-                ", quantidadeVendida=" + quantidadeVendida +
-                ", dataUltimaVenda=" + dataUltimaVenda +
-                '}';
+        return "RelatorioDeVendasVo [nomeProduto=" + nomeProduto + ", quantidadeVendida=" + quantidadeVendida
+                + ", dataUltimaVenda=" + dataUltimaVenda + "]";
     }
 
     public String getNomeProduto() {
@@ -33,4 +31,5 @@ public class RelatorioDeVendasVo {
     public LocalDate getDataUltimaVenda() {
         return dataUltimaVenda;
     }
+
 }
