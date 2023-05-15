@@ -8,6 +8,7 @@ import br.com.alura.loja.util.JPAUtil;
 
 import javax.persistence.EntityManager;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public class TesteCriteria {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class TesteCriteria {
         EntityManager em = JPAUtil.getEntityManager();
         ProdutoDao produtoDao = new ProdutoDao(em);
 
-        produtoDao.budcarPorParametrosComCriteria("PS5", null, null);
+        produtoDao.budcarPorParametrosComCriteria("PS5", null, LocalDate.now());
     }
 
     public static void popularBancoDeDados(){
